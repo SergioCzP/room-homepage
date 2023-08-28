@@ -1,4 +1,38 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: v.$primary-font;
+}
+
 img {
   display: block;
   max-width: 100%;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 42rem;
+
+  @include m.tablet {
+    max-width: 144rem;
+  }
 }
