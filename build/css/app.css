@@ -449,6 +449,34 @@ button {
   height: 1.5rem;
 }
 
+.information {
+  padding: 6rem 3rem;
+}
+.information__heading {
+  font-size: 3.6rem;
+  margin: 0 0 2.5rem;
+}
+.information__text {
+  color: hsl(0, 0%, 63%);
+  line-height: 1.5;
+}
+
+.btn-shop__link {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  line-height: 0;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 0%);
+  letter-spacing: 1rem;
+  margin-top: 2.5rem;
+  padding: 1rem;
+}
+.btn-shop__arrow {
+  height: 1rem;
+  width: 4rem;
+}
+
 .slider img {
   width: 100%;
   height: auto;

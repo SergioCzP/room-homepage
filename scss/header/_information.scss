@@ -1,0 +1,35 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.information {
+  padding: 6rem 3rem;
+
+  &__heading {
+    font-size: 3.6rem;
+    margin: 0 0 2.5rem;
+  }
+
+  &__text {
+    color: v.$dark-gray;
+    line-height: 1.5;
+  }
+}
+
+.btn-shop {
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    line-height: 0;
+    text-transform: uppercase;
+    color: v.$black;
+    letter-spacing: 1rem;
+    margin-top: 2.5rem;
+    padding: 1rem;
+  }
+
+  &__arrow {
+    height: 1rem;
+    width: 4rem;
+  }
+}
