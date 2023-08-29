@@ -1,0 +1,15 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.attribution {
+  background-color: v.$black;
+  color: v.$white;
+  padding: 2.5rem;
+
+  &__text {
+    a {
+      display: inline-block;
+      color: rgb(138, 185, 255);
+    }
+  }
+}
