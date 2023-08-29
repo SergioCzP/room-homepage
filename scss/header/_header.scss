@@ -1,9 +1,15 @@
 @use "base/variables" as v;
 @use "base/mixins" as m;
 
+.header-grid {
+  display: grid;
+  grid-template-rows: 36rem 45rem;
+}
+
 .header {
+  position: relative;
   &__content {
-    position: relative;
+    // position: relative;
   }
 }
 

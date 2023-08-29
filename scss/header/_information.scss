@@ -2,6 +2,7 @@
 @use "base/mixins" as m;
 
 .information {
+  position: relative;
   padding: 6rem 3rem;
 
   &__heading {
@@ -16,6 +17,9 @@
 }
 
 .btn-shop {
+  position: absolute;
+  bottom: 5.5rem;
+
   &__link {
     display: flex;
     align-items: center;

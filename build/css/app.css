@@ -350,10 +350,14 @@ button {
   cursor: pointer;
 }
 
-.header__content {
-  position: relative;
+.header-grid {
+  display: grid;
+  grid-template-rows: 36rem 45rem;
 }
 
+.header {
+  position: relative;
+}
 .navigation {
   width: 100%;
   position: absolute;
@@ -450,6 +454,7 @@ button {
 }
 
 .information {
+  position: relative;
   padding: 6rem 3rem;
 }
 .information__heading {
@@ -461,6 +466,10 @@ button {
   line-height: 1.5;
 }
 
+.btn-shop {
+  position: absolute;
+  bottom: 5.5rem;
+}
 .btn-shop__link {
   display: flex;
   align-items: center;
@@ -477,9 +486,16 @@ button {
   width: 4rem;
 }
 
-.slider img {
+.slider {
+  position: relative;
+}
+.slider__slide {
+  position: absolute;
   width: 100%;
-  height: auto;
+}
+.slider__image {
+  width: 100%;
+  height: 36rem;
   object-fit: cover;
 }
 
