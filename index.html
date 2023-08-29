@@ -23,59 +23,25 @@
     <script defer src="app.js"></script>
   </head>
   <body>
-    <div class="header">
-      <header class="header__hero">
-        <div class="header__navigation">
-          <!-- active -->
-          <div class="header__fixed">
-            <!-- no-bg -->
-            <div class="header__flex no-bg">
-              <button class="header__btn no-bg">
-                <img
-                  class="header__btn-img"
-                  src="images/icon-close.svg"
-                  alt="menu"
-                  width="100"
-                  height="100"
-                />
-              </button>
-
-              <!-- display-none -->
-              <a href="index.html" class="header__logo">
-                <img
-                  class="header__logo-img"
-                  src="images/logo.svg"
-                  alt="room logo"
-                  width="100"
-                  height="100"
-                />
-              </a>
-
-              <!-- active -->
-              <nav class="nav">
-                <a href="#" class="nav__link">home</a>
-                <a href="#" class="nav__link">shop</a>
-                <a href="#" class="nav__link">about</a>
-                <a href="#" class="nav__link">contact</a>
-              </nav>
+    <!-- <p style="text-align: center">a</p> -->
+    <div class="header-grid">
+      <header class="header">
+        <div class="header__content">
+          <!-- Hero Slider -->
+          <div class="slider">
+            <div class="slider__slide">
+              <img
+                srcset="
+                  images/mobile-image-hero-1.jpg  375w,
+                  images/desktop-image-hero-1.jpg 840w
+                "
+                sizes="(min-width: 768px) 840px, 375px"
+                src="images/mobile-image-hero-1.jpg"
+                alt="table"
+              />
             </div>
-          </div>
-        </div>
 
-        <div class="slider">
-          <div class="slider__slide">
-            <img
-              srcset="
-                images/mobile-image-hero-1.jpg  375w,
-                images/desktop-image-hero-1.jpg 840w
-              "
-              sizes="(min-width: 768px) 840px, 375px"
-              src="images/mobile-image-hero-1.jpg"
-              alt="table"
-            />
-          </div>
-
-          <!-- <div class="slider__slide">
+            <!-- <div class="slider__slide">
             <img
               srcset="
                 images/mobile-image-hero-2.jpg  375w,
@@ -86,7 +52,7 @@
               alt="table"
             />
           </div>
-
+        
           <div class="slider__slide">
             <img
               srcset="
@@ -98,31 +64,75 @@
               alt="table"
             />
           </div> -->
-        </div>
+          </div>
 
-        <div class="btn">
-          <button class="btn__left">
-            <img
-              src="images/icon-angle-left.svg"
-              alt="left arrow"
-              width="30"
-              height="30"
-            />
-          </button>
-          <button class="btn__right">
-            <img
-              src="images/icon-angle-right.svg"
-              alt="right arrow"
-              width="30"
-              height="30"
-            />
-          </button>
+          <!-- Logo, nav and links -->
+          <!-- .header__navigation position: absolute -->
+          <div class="navigation">
+            <!-- .navigation__modal position:fixed -->
+            <div class="navigation__modal">
+              <div class="navigation__modal-content">
+                <!-- button display menu -->
+                <button class="navigation__btn">
+                  <img
+                    src="images/icon-hamburger.svg"
+                    width="100"
+                    height="200"
+                    class="navigation__btn-img"
+                    alt="menu"
+                    data-src="images/icon-close.svg"
+                  />
+                </button>
+
+                <a href="index.html" class="navigation__logo logo-active">
+                  <img
+                    src="images/logo.svg"
+                    width="100"
+                    height="200"
+                    class="navigation__logo-img"
+                    alt="logo room"
+                  />
+                </a>
+
+                <nav class="navigation__nav">
+                  <a href="#" class="navigation__link">home</a>
+                  <a href="#" class="navigation__link">shop</a>
+                  <a href="#" class="navigation__link">about</a>
+                  <a href="#" class="navigation__link">contact</a>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <!-- Next and prev buttons -->
+          <div class="btns">
+            <!-- btn left -->
+            <button class="btns__left">
+              <img
+                src="images/icon-angle-left.svg"
+                width="100"
+                height="100"
+                class="btns__left-img"
+                alt="arrow left"
+              />
+            </button>
+
+            <button class="btns__right">
+              <img
+                src="images/icon-angle-right.svg"
+                width="100"
+                height="100"
+                class="btns__right-img"
+                alt="arrow left"
+              />
+            </button>
+          </div>
         </div>
       </header>
 
-      <main class="header__text">
+      <main class="information">
         <div class="slider">
-          <section class="slider__slide information">
+          <section class="slider__slide information__section">
             <h2 class="information__heading">
               Discover innovative ways to decorate
             </h2>

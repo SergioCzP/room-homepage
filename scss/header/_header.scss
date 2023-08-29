@@ -1,0 +1,126 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.header {
+  &__content {
+    position: relative;
+  }
+}
+
+.navigation {
+  width: 100%;
+  position: absolute;
+  top: 0;
+
+  &__modal {
+    &-active {
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0); /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    }
+  }
+
+  &__modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 2.5rem;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+
+    &.modal-active {
+      background: none;
+      background-color: v.$white;
+    }
+  }
+
+  &__btn {
+    border: none;
+
+    margin: 0;
+    // padding: 0.25rem 0;
+
+    background-color: transparent;
+
+    @include m.tablet {
+      display: none;
+    }
+
+    &-img {
+      object-fit: cover;
+    }
+  }
+
+  &__btn-img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+  }
+
+  &__link {
+    color: v.$black;
+    // padding: 0 1rem;
+    font-weight: bold;
+  }
+}
+
+.navigation__logo {
+  display: none;
+
+  &.logo-active {
+    margin: 0 auto;
+    // margin: 0 calc(210px - 50px) 0 0;
+    display: block;
+  }
+
+  &-img {
+    object-fit: cover;
+    width: 9rem;
+    height: 2rem;
+  }
+}
+
+.navigation__nav {
+  display: none;
+  gap: 3rem;
+
+  &.nav-active {
+    display: flex;
+  }
+
+  @include m.tablet {
+    display: flex;
+  }
+}
+
+.btns {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+
+  &__left,
+  &__right {
+    margin: 0;
+    padding: 0;
+    border: none;
+    padding: 2.5rem;
+    background-color: v.$black;
+  }
+
+  &__left-img,
+  &__right-img {
+    margin: 0 auto;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
