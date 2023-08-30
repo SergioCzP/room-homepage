@@ -15,9 +15,9 @@
       padding: 6rem 3rem 0;
     }
 
-    // @include m.tablet {
-    //   padding: 12rem 10rem 3rem;
-    // }
+    @include m.mindesk {
+      padding: 8rem 6rem 0;
+    }
   }
 
   &__heading {
@@ -39,6 +39,10 @@
     bottom: 10rem;
   }
 
+  @include m.mindesk {
+    bottom: 12rem;
+  }
+
   &__link {
     display: flex;
     align-items: center;
@@ -53,6 +57,10 @@
 
     @include m.tablet {
       margin: 3rem 0 0 2rem;
+    }
+
+    @include m.mindesk {
+      margin: 3rem 0 0 5rem;
     }
   }
 

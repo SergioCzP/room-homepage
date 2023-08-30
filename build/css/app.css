@@ -396,6 +396,12 @@ button {
     padding: 6rem 2.5rem;
   }
 }
+@media (min-width: 992px) {
+  .navigation__modal-content {
+    padding: 6rem;
+    gap: 5rem;
+  }
+}
 .navigation__modal-content.modal-active {
   background: none;
   background-color: hsl(0, 0%, 100%);
@@ -518,6 +524,11 @@ button {
     padding: 6rem 3rem 0;
   }
 }
+@media (min-width: 992px) {
+  .information__section {
+    padding: 8rem 6rem 0;
+  }
+}
 .information__heading {
   font-size: 3.6rem;
   margin: 0 0 2.5rem;
@@ -536,6 +547,11 @@ button {
     bottom: 10rem;
   }
 }
+@media (min-width: 992px) {
+  .btn-shop {
+    bottom: 12rem;
+  }
+}
 .btn-shop__link {
   display: flex;
   align-items: center;
@@ -551,6 +567,11 @@ button {
 @media (min-width: 768px) {
   .btn-shop__link {
     margin: 3rem 0 0 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .btn-shop__link {
+    margin: 3rem 0 0 5rem;
   }
 }
 .btn-shop__arrow {

@@ -52,6 +52,11 @@
       padding: 6rem 2.5rem;
     }
 
+    @include m.mindesk {
+      padding: 6rem;
+      gap: 5rem;
+    }
+
     &.modal-active {
       background: none;
       background-color: v.$white;
