@@ -24,13 +24,42 @@ console.log(slides);
 console.log(slideImages);
 console.log(slideInfos);
 
+const toggleVisible = function (slide) {
+  slideImages[slide].classList.remove("no-visible");
+  slideInfos[slide].classList.remove("no-visible");
+
+  const hiddenSlides = slideImages.filter(
+    (s) => !s.classList.contains("no-visible")
+  );
+
+  const hiddenInfos = slideInfos.filter(
+    (s) => !s.classList.contains("no-visible")
+  );
+
+  hiddenSlides
+    .find(
+      (s) => !s.classList.contains("no-visible") && s !== slideImages[slide]
+    )
+    ?.classList.add("no-visible");
+
+  hiddenInfos
+    .find(
+      (s) => !s.classList.contains("no-visible") && s !== hiddenInfos[slide]
+    )
+    ?.classList.add("no-visible");
+};
+
 const goToSlide = function (slide) {
+  console.log(slideImages.includes((s) => s.classList.contains("no-visible")));
+
   slideImages.forEach(
     (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
   );
   slideInfos.forEach(
     (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
   );
+
+  toggleVisible(slide);
 };
 
 const nextSlide = function () {
@@ -53,6 +82,8 @@ const prevSlide = function () {
 
 const init = function () {
   goToSlide(0);
+  slideImages[0].classList.remove("no-visible");
+  slideInfos[0].classList.remove("no-visible");
 };
 
 init();

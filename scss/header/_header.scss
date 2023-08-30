@@ -5,6 +5,11 @@
   display: grid;
   grid-template-rows: 36rem 45rem;
   overflow-x: hidden;
+
+  @include m.tablet {
+    grid-template-columns: 55.56% 1fr;
+    grid-template-rows: 53rem;
+  }
 }
 
 .header {
@@ -37,9 +42,15 @@
     padding: 5rem 2.5rem;
     background: linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.5) 0%,
       rgba(0, 0, 0, 0) 100%
     );
+
+    @include m.tablet {
+      justify-content: flex-start;
+      gap: 2.5rem;
+      padding: 6rem 2.5rem;
+    }
 
     &.modal-active {
       background: none;
@@ -74,6 +85,10 @@
     color: v.$black;
     // padding: 0 1rem;
     font-weight: bold;
+
+    @include m.tablet {
+      color: v.$white;
+    }
   }
 }
 
@@ -84,6 +99,10 @@
     margin: 0 auto;
     // margin: 0 calc(210px - 50px) 0 0;
     display: block;
+
+    @include m.tablet {
+      margin: 0;
+    }
   }
 
   &-img {
@@ -112,6 +131,11 @@
   right: 0;
   display: flex;
 
+  @include m.tablet {
+    right: -17rem;
+    z-index: 1;
+  }
+
   &__left,
   &__right {
     margin: 0;
@@ -119,6 +143,10 @@
     border: none;
     padding: 2.5rem;
     background-color: v.$black;
+
+    @include m.tablet {
+      padding: 3rem;
+    }
   }
 
   &__left-img,
@@ -126,5 +154,18 @@
     margin: 0 auto;
     width: 1.5rem;
     height: 1.5rem;
+    object-fit: cover;
+
+    @include m.tablet {
+      width: 2.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+.no-visible {
+  @include m.tablet {
+    // visibility: hidden;
+    opacity: 0;
   }
 }
