@@ -19,6 +19,10 @@
 
   &__text {
     padding: 6rem 3rem;
+
+    @include m.meddesk {
+      padding: 6rem 4rem;
+    }
   }
 
   &__heading {

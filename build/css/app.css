@@ -632,6 +632,11 @@ button {
 .about__text {
   padding: 6rem 3rem;
 }
+@media (min-width: 1200px) {
+  .about__text {
+    padding: 6rem 4rem;
+  }
+}
 .about__heading {
   text-transform: uppercase;
   margin-bottom: 2.5rem;
