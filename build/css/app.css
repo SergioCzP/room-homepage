@@ -353,11 +353,13 @@ button {
 .header-grid {
   display: grid;
   grid-template-rows: 36rem 45rem;
+  overflow-x: hidden;
 }
 
 .header {
   position: relative;
 }
+
 .navigation {
   width: 100%;
   position: absolute;
@@ -455,7 +457,9 @@ button {
 
 .information {
   position: relative;
-  padding: 6rem 3rem;
+}
+.information__section {
+  padding: 6rem 3rem 2rem;
 }
 .information__heading {
   font-size: 3.6rem;
@@ -479,6 +483,7 @@ button {
   color: hsl(0, 0%, 0%);
   letter-spacing: 1rem;
   margin-top: 2.5rem;
+  margin: 2.5rem 0 0 3rem;
   padding: 1rem;
 }
 .btn-shop__arrow {

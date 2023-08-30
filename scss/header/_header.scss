@@ -4,13 +4,11 @@
 .header-grid {
   display: grid;
   grid-template-rows: 36rem 45rem;
+  overflow-x: hidden;
 }
 
 .header {
   position: relative;
-  &__content {
-    // position: relative;
-  }
 }
 
 .navigation {
