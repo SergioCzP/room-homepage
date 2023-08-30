@@ -43,9 +43,7 @@ const toggleVisible = function (slide) {
     ?.classList.add("no-visible");
 
   hiddenInfos
-    .find(
-      (s) => !s.classList.contains("no-visible") && s !== hiddenInfos[slide]
-    )
+    .find((s) => !s.classList.contains("no-visible") && s !== slideInfos[slide])
     ?.classList.add("no-visible");
 };
 
