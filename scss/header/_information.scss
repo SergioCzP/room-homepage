@@ -18,6 +18,10 @@
     @include m.mindesk {
       padding: 8rem 6rem 0;
     }
+
+    @include m.meddesk {
+      padding: 12rem 10rem 0;
+    }
   }
 
   &__heading {
@@ -43,6 +47,10 @@
     bottom: 12rem;
   }
 
+  @include m.meddesk {
+    bottom: 10rem;
+  }
+
   &__link {
     display: flex;
     align-items: center;
@@ -61,6 +69,10 @@
 
     @include m.mindesk {
       margin: 3rem 0 0 5rem;
+    }
+
+    @include m.meddesk {
+      margin: 3rem 0 0 9rem;
     }
   }
 

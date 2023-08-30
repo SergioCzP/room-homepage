@@ -529,6 +529,11 @@ button {
     padding: 8rem 6rem 0;
   }
 }
+@media (min-width: 1200px) {
+  .information__section {
+    padding: 12rem 10rem 0;
+  }
+}
 .information__heading {
   font-size: 3.6rem;
   margin: 0 0 2.5rem;
@@ -552,6 +557,11 @@ button {
     bottom: 12rem;
   }
 }
+@media (min-width: 1200px) {
+  .btn-shop {
+    bottom: 10rem;
+  }
+}
 .btn-shop__link {
   display: flex;
   align-items: center;
@@ -572,6 +582,11 @@ button {
 @media (min-width: 992px) {
   .btn-shop__link {
     margin: 3rem 0 0 5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .btn-shop__link {
+    margin: 3rem 0 0 9rem;
   }
 }
 .btn-shop__arrow {
