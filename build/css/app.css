@@ -598,10 +598,21 @@ button {
   }
 }
 
+@media (min-width: 992px) {
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 40.28% 1fr;
+  }
+}
 .about__image {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+@media (min-width: 992px) {
+  .about__image {
+    height: 100%;
+  }
 }
 .about__text {
   padding: 6rem 3rem;

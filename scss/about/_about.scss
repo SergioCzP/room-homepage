@@ -2,10 +2,19 @@
 @use "base/mixins" as m;
 
 .about {
+  @include m.mindesk {
+    display: grid;
+    grid-template-columns: 1fr 40.28% 1fr;
+  }
+
   &__image {
     width: 100%;
     height: auto;
     object-fit: cover;
+
+    @include m.mindesk {
+      height: 100%;
+    }
   }
 
   &__text {
