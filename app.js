@@ -83,14 +83,9 @@ const init = function () {
   slideImages[0].classList.remove("no-visible");
   slideInfos[0].classList.remove("no-visible");
 };
-
 init();
 
-// Event handlers
-btnLeft.addEventListener("click", prevSlide);
-btnRight.addEventListener("click", nextSlide);
-
-navBtn.addEventListener("click", function () {
+const displayMenu = function () {
   navModal.classList.toggle("navigation__modal-active");
   modalContent.classList.toggle("modal-active");
   logo.classList.toggle("logo-active");
@@ -100,4 +95,10 @@ navBtn.addEventListener("click", function () {
   } else {
     navBtn.firstElementChild.src = "images/icon-close.svg";
   }
-});
+};
+
+// Event handlers
+btnLeft.addEventListener("click", prevSlide);
+btnRight.addEventListener("click", nextSlide);
+
+navBtn.addEventListener("click", displayMenu);

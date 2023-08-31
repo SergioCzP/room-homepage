@@ -72,6 +72,29 @@
 
     @include m.tablet {
       margin: 3rem 0 0 2rem;
+      transition: color 0.3s ease, filter 0.3s ease;
+
+      &:hover {
+        color: v.$dark-gray;
+      }
+
+      &:hover img {
+        // Target color
+        // #a1a1a1
+
+        // Compute Filters
+        // Real pixel, color applied through CSS background-color:
+
+        // Filtered pixel, color applied through CSS filter:
+        transform: translateX(1rem);
+
+        filter: invert(76%) sepia(0%) saturate(260%) hue-rotate(202deg)
+          brightness(91%) contrast(71%);
+      }
+
+      img {
+        transition: transform 0.3s ease;
+      }
     }
 
     @include m.mindesk {

@@ -114,6 +114,21 @@
     @include m.tablet {
       color: v.$white;
     }
+
+    @include m.tablet {
+      position: relative;
+
+      &:hover::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 80%;
+        height: 0.25rem;
+        left: 10%;
+        bottom: 0;
+        background-color: v.$white;
+      }
+    }
   }
 }
 
@@ -175,6 +190,12 @@
 
     @include m.tablet {
       padding: 3rem;
+
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: v.$very-dark-gray;
+      }
     }
   }
 

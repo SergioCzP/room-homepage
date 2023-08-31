@@ -448,6 +448,21 @@ button {
     color: hsl(0, 0%, 100%);
   }
 }
+@media (min-width: 768px) {
+  .navigation__link {
+    position: relative;
+  }
+  .navigation__link:hover::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 80%;
+    height: 0.25rem;
+    left: 10%;
+    bottom: 0;
+    background-color: hsl(0, 0%, 100%);
+  }
+}
 
 .navigation__logo {
   display: none;
@@ -507,6 +522,10 @@ button {
 @media (min-width: 768px) {
   .btns__left, .btns__right {
     padding: 3rem;
+    transition: background-color 0.3s ease;
+  }
+  .btns__left:hover, .btns__right:hover {
+    background-color: hsl(0, 0%, 27%);
   }
 }
 .btns__left-img, .btns__right-img {
@@ -607,6 +626,17 @@ button {
 @media (min-width: 768px) {
   .btn-shop__link {
     margin: 3rem 0 0 2rem;
+    transition: color 0.3s ease, filter 0.3s ease;
+  }
+  .btn-shop__link:hover {
+    color: hsl(0, 0%, 63%);
+  }
+  .btn-shop__link:hover img {
+    transform: translateX(1rem);
+    filter: invert(76%) sepia(0%) saturate(260%) hue-rotate(202deg) brightness(91%) contrast(71%);
+  }
+  .btn-shop__link img {
+    transition: transform 0.3s ease;
   }
 }
 @media (min-width: 992px) {
