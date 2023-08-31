@@ -379,6 +379,15 @@ button {
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
+@media (min-width: 768px) {
+  .navigation__modal-active {
+    position: absolute;
+    height: auto;
+    background-color: unset;
+    z-index: auto;
+    left: auto;
+  }
+}
 .navigation__modal-content {
   display: flex;
   align-items: center;
@@ -402,6 +411,15 @@ button {
 .navigation__modal-content.modal-active {
   background: none;
   background-color: hsl(0, 0%, 100%);
+}
+@media (min-width: 768px) {
+  .navigation__modal-content.modal-active {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 2.5rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  }
 }
 .navigation__btn {
   border: none;
@@ -433,6 +451,11 @@ button {
 
 .navigation__logo {
   display: none;
+}
+@media (min-width: 768px) {
+  .navigation__logo {
+    display: block;
+  }
 }
 .navigation__logo.logo-active {
   margin: 0 auto;
