@@ -336,12 +336,9 @@ a {
   text-decoration: none;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 42rem;
-}
 @media (min-width: 768px) {
   .container {
+    margin: 0 auto;
     max-width: 144rem;
   }
 }

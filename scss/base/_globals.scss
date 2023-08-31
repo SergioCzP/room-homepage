@@ -29,10 +29,8 @@ a {
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 42rem;
-
   @include m.tablet {
+    margin: 0 auto;
     max-width: 144rem;
   }
 }
