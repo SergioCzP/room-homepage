@@ -357,7 +357,7 @@ button {
 }
 @media (min-width: 768px) {
   .header-grid {
-    grid-template-columns: 55.56% 1fr;
+    grid-template-columns: 58.33% 1fr;
     grid-template-rows: 53rem;
   }
 }
@@ -521,15 +521,20 @@ button {
 }
 @media (min-width: 768px) {
   .information__section {
-    padding: 6rem 3rem 0;
+    padding: 4rem 3rem 0;
   }
 }
 @media (min-width: 992px) {
   .information__section {
-    padding: 8rem 6rem 0;
+    padding: 8rem 5rem 0;
   }
 }
 @media (min-width: 1200px) {
+  .information__section {
+    padding: 12rem 8rem 0;
+  }
+}
+@media (min-width: 1440px) {
   .information__section {
     padding: 12rem 10rem 0;
   }
@@ -549,7 +554,7 @@ button {
 }
 @media (min-width: 768px) {
   .btn-shop {
-    bottom: 10rem;
+    bottom: 9rem;
   }
 }
 @media (min-width: 992px) {
@@ -560,6 +565,11 @@ button {
 @media (min-width: 1200px) {
   .btn-shop {
     bottom: 10rem;
+  }
+}
+@media (min-width: 1440px) {
+  .btn-shop {
+    bottom: 11rem;
   }
 }
 .btn-shop__link {
@@ -581,10 +591,15 @@ button {
 }
 @media (min-width: 992px) {
   .btn-shop__link {
-    margin: 3rem 0 0 5rem;
+    margin: 3rem 0 0 4rem;
   }
 }
 @media (min-width: 1200px) {
+  .btn-shop__link {
+    margin: 3rem 0 0 7rem;
+  }
+}
+@media (min-width: 1440px) {
   .btn-shop__link {
     margin: 3rem 0 0 9rem;
   }
