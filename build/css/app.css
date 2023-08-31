@@ -416,9 +416,15 @@ button {
   .navigation__modal-content.modal-active {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 5rem 2.5rem;
+    justify-content: flex-start;
+    padding: 6rem 2.5rem;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+}
+@media (min-width: 992px) {
+  .navigation__modal-content.modal-active {
+    padding: 6rem;
+    gap: 5rem;
   }
 }
 .navigation__btn {
