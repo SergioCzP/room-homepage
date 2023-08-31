@@ -2,9 +2,16 @@
 
 const { watch, dest, src, series } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
+const cssnano = require("gulp-cssnano");
+const sourcemaps = require("gulp-sourcemaps");
 
 function buildStyle(done) {
-  src("scss/app.scss").pipe(sass()).pipe(dest("build/css"));
+  src("scss/app.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(cssnano())
+    .pipe(sourcemaps.write("."))
+    .pipe(dest("build/css"));
   done();
 }
 
